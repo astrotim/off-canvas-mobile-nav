@@ -1,0 +1,55 @@
+body {
+	font-family: sans-serif;
+	background: $lightGrey;
+	color: $grey;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+  margin-bottom: 1em;
+
+  &:first-letter {
+  	font-size: 1.4em;
+  	color: $green;
+  	font-weight: bold;
+  	padding-right: 1px;
+  }
+}
+
+header {
+  background: $green;
+
+  h1 {
+  	color: white;
+    text-align:center;
+    font-weight: normal;
+    // text-transform: uppercase;
+    font-size: 20px;
+    padding: 1em 0;
+  }
+}
+
+.inner-wrapper {
+	position: relative;
+	overflow-x: hidden;
+  
+  &.nav-open p {
+    color: #b5d1e9;
+  }
+}
+
+.nav-open .inner-wrapper {
+  overflow: hidden;
+}
+
+[role="main"] {
+  padding: 1em;
+}
+

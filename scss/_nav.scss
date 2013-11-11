@@ -1,0 +1,39 @@
+.nav-bg {
+	background: $darkGrey;
+}
+
+nav {
+
+	ul {
+		font-size: 0;
+		text-align: center;
+	}
+
+	li {
+		@include inline-block;
+		list-style: none;
+
+		a {
+			color: white;
+			display: block;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px 13px;
+
+			&:hover {
+				background: $grey;
+			}
+
+			&:visited {
+				color: white;
+			}
+		}
+	}
+
+}
+
+#nav-toggle {
+	display: none;
+}
+
