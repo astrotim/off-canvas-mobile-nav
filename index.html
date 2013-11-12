@@ -6,6 +6,7 @@
 
 	<title>Off-Canvas Mobile Navigation with CSS3 animation</title>
 
+<link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -14,7 +15,7 @@
 <div class="wrapper">
 <div class="inner-wrapper">
 	<header role="banner">
-		<h1>Off-Canvas Mobile Navigation</h1>
+		<h1>Off-Canvas Mobile Nav</h1>
 		<button id="nav-toggle">Navigation</button>
 
 		<div class="nav-bg">
@@ -51,23 +52,20 @@
 </div> <!--.wrapper-->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script>
 
-	var viewportHt = $(window).innerHeight();
-	console.log(viewportHt);
-
-	var canvas = $('body'),
-		page = canvas.find('.wrapper'),
-		navToggle = canvas.find('#nav-toggle');
+	var body = $('body'),
+		page = body.find('.wrapper'),
+		navToggle = body.find('#nav-toggle'),
+		viewportHt = $(window).innerHeight();
 
 	navToggle.on('click', function(){
 		
-		canvas
+		body
 			.removeClass('loading')
 			.toggleClass('nav-open');
 
-		if ( canvas.hasClass('nav-open') ) {
+		if ( body.hasClass('nav-open') ) {
 			page.css('height', viewportHt);
 		} else {
 			page.css('height', 'auto');
@@ -76,12 +74,9 @@
 	});
 
 	page.find('[role="main"]').on('click', function(e){
-		canvas.removeClass('nav-open');
+		body.removeClass('nav-open');
 		e.preventDefault();
 	});
-
-
-
 
 </script>
 
