@@ -20,14 +20,14 @@ nav {
 			text-transform: uppercase;
 			text-decoration: none;
 			padding: 10px 13px;
+		}
 
-			&:hover {
-				background: $grey;
-			}
+		a:hover {
+			background: $grey;
+		}
 
-			&:visited {
-				color: white;
-			}
+		a:visited {
+			color: white;
 		}
 	}
 
