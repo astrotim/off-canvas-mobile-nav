@@ -7,18 +7,6 @@ Author URI: http://astronautweb.co/
 
 @import 'bourbon/bourbon';
 
-$blue: 		#2980B9;
-$lightBlue: #3498DB;
-$darkGrey: 	#2c3e50;
-$grey: 		#34495e;
-$lightGrey: #f9f9f9;
-$red: 		#c0392b;
-$lightRed: 	#e74c3c;
-$yellow: 	#f1c40f;
-$green: 	#16a085;
-
-@import 'html5-reset';
 @import 'global';
 @import 'nav';
 @import 'off-canvas';
-@import 'page';
