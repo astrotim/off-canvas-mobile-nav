@@ -105,7 +105,9 @@ nav li a:visited {
   }
 
   #nav-toggle {
-    background: url("https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-48.png");
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generated%20by%20IcoMoon.io%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20width%3D%2221%22%20height%3D%2224%22%20viewBox%3D%220%200%2021%2024%22%3E%0A%09%3Cpath%20d%3D%22M20.571%2018v1.714q0%200.348-0.254%200.603t-0.603%200.254h-18.857q-0.348%200-0.603-0.254t-0.254-0.603v-1.714q0-0.348%200.254-0.603t0.603-0.254h18.857q0.348%200%200.603%200.254t0.254%200.603zM20.571%2011.143v1.714q0%200.348-0.254%200.603t-0.603%200.254h-18.857q-0.348%200-0.603-0.254t-0.254-0.603v-1.714q0-0.348%200.254-0.603t0.603-0.254h18.857q0.348%200%200.603%200.254t0.254%200.603zM20.571%204.286v1.714q0%200.348-0.254%200.603t-0.603%200.254h-18.857q-0.348%200-0.603-0.254t-0.254-0.603v-1.714q0-0.348%200.254-0.603t0.603-0.254h18.857q0.348%200%200.603%200.254t0.254%200.603z%22%20fill%3D%22%23ffffff%22%20/%3E%0A%3C/svg%3E%0A");
+    background-color: transparent;
+    background-repeat: no-repeat;
     background-size: 24px 24px;
     display: block;
     width: 24px;
@@ -114,9 +116,14 @@ nav li a:visited {
     border: none;
     outline: none;
     position: absolute;
-    top: 16px;
+    top: 20px;
     left: 10px;
     cursor: pointer;
+  }
+
+  .no-svg #nav-toggle {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAAeElEQVQ4jeXUoRGDYBBE4SsnBUSkgEgKiECmiDjKQCAoA4GgjIgICon4ELRw/5zgzazduZs3sxHXBj3mpIy4Bf5ymSK5EOZwnr0n5YdXtdJq8MGWlAWPZvablA7y3l/xrFZajXNZ9qR80TWz32T63vJGesK9WmkxB8ZGxb+28pBAAAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
   }
 
   nav ul {
