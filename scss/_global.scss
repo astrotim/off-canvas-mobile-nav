@@ -1,14 +1,3 @@
-$blue:    #2980B9;
-$lightBlue: #3498DB;
-$darkGrey:  #2c3e50;
-$darkerGrey:  darken($darkGrey, 3%);
-$grey:    #34495e;
-$lightGrey: #f9f9f9;
-$red:     #c0392b;
-$lightRed:  #e74c3c;
-$yellow:  #f1c40f;
-$green:   #16a085;
-
 body {
 	font-family: sans-serif;
 	background: $lightGrey;
@@ -48,7 +37,7 @@ header {
 }
 
 .inner-wrapper {
-	position: relative;
+	// position: relative;
 	overflow-x: hidden;
   
   &.nav-open p {

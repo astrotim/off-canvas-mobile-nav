@@ -52,14 +52,20 @@
 </div> <!--.inner-wrapper-->
 </div> <!--.wrapper-->
 
+<div class="overlay" aria-hidden="true"></div>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script>
 
-	var body = $('body'),
-		page = body.find('.wrapper'),
-		navToggle = body.find('#nav-toggle'),
-		viewportHt = $(window).innerHeight();
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+
+	var body 		= $('body'),
+		page 		= body.find('.wrapper'),
+		navToggle 	= body.find('#nav-toggle'),
+		overlay 	= body.find('.overlay'),
+		viewportHt 	= $(window).innerHeight();
 
 	navToggle.on('click', function(){
 		
@@ -75,10 +81,15 @@
 
 	});
 
-	page.find('[role="main"]').on('click', function(e){
+	overlay.on('click', function(){
 		body.removeClass('nav-open');
-		e.preventDefault();
 	});
+
+	var isIE = document.all && document.querySelector;
+
+	if(isIE) {
+		body.addClass('ie');
+	}
 
 </script>
 

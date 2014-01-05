@@ -1,4 +1,4 @@
-/*
+/*!
 Off-Canvas Mobile Navigation with CSS3 animation
 Author: Tim Holt
 Author URI: http://astronautweb.co/
@@ -40,7 +40,6 @@ header h1 {
 }
 
 .inner-wrapper {
-  position: relative;
   overflow-x: hidden;
 }
 .inner-wrapper.nav-open p {
@@ -91,11 +90,16 @@ nav li a:visited {
 }
 
 @media only screen and (max-width: 1023px) {
+  .wrapper {
+    position: relative;
+  }
+
   .nav-bg {
     background: #273646;
     width: 240px;
     height: 100%;
     position: fixed;
+    z-index: 5;
     top: 0;
     left: -240px;
   }
@@ -243,9 +247,6 @@ nav li a:visited {
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
 
   .wrapper {
@@ -271,5 +272,48 @@ nav li a:visited {
     -webkit-animation: none;
     -moz-animation: none;
     animation: none;
+  }
+
+  .overlay {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-open .overlay {
+    display: block;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 0 \0) {
+  .nav-open .nav-bg {
+    left: 0;
+  }
+
+  .wrapper,
+  .nav-open .wrapper {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+
+  .nav-open .wrapper {
+    -webkit-transform: translateX(240px);
+    -moz-transform: translateX(240px);
+    -ms-transform: translateX(240px);
+    -o-transform: translateX(240px);
+    transform: translateX(240px);
+  }
+
+  .wrapper {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
 }
